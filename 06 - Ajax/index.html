@@ -1,0 +1,35 @@
+<!-- Is AJAX getting replaced by fetch API()?
+    https://medium.com/@reemshakes/is-ajax-getting-replaced-by-fetch-api-55207234793f 
+
+    Official MDN Guide: https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanye - API - jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <p id="quote"></p>
+    <button>Hit me up, Kanye!</button>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $.ajax({
+            url: "https://api.kanye.rest/",
+            dataType: "json",
+            error: function () {
+              alert("Kanye was silent!");
+            },
+            success: function (data) {
+              $("#quote").html(`Kanye said: ${data.quote}`);
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        const paragraph = $("p");
+        paragraph.css("background-color", "cyan");
+        paragraph.addClass("zebra").text("Hey!");
+      });
+    </script>
+  </head>
+  <body>
+    <p>The first paragraph is selected.</p>
+    <p>The second paragraph is selected.</p>
+    <p>The third paragraph is selected.</p>
+  </body>
+</html>
