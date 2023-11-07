@@ -1,0 +1,18 @@
+p {
+    text-align: center;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 25px;
+    width: fit-content;
+    margin: auto;
+    font-family: "Arial";
+}
+
+button {
+    background-color: yellow;
+    border: 0;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
